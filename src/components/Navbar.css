@@ -1,0 +1,64 @@
+/* components/Navbar.css */
+.navbar {
+  background-color: green;
+  color: #333;
+  padding: 10px 0;
+}
+
+.navbar.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+.navbar.system {
+    background-color: purple;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown {
+  position: relative;
+  margin-left: 10px;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 3px 3px;
+  display: none;
+}
+
+.dropdown.open .dropdown-content {
+  display: block;
+}
+
+.dropdown-content span {
+  display: block;
+  padding: 5px;
+  cursor: pointer;
+}
