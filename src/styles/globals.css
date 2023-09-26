@@ -2,11 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+/* styles.css */
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-light: #ffffff;
+  --background-dark: rgb(4,11,25);
+  --text-light: #000000;
+  --text-dark: #ffffff;
+  --dropdown-background-light: purple;
+  --dropdown-background-dark: black; 
 }
+
+/* Light Theme */
+[data-theme='light'] {
+  --background-color: var(--background-light);
+  --text-color: var(--text-light);
+}
+
+/* Dark Theme */
+[data-theme='dark'] {
+  --background-color: var(--background-dark);
+  --text-color: var(--text-dark);
+}
+
+/* Apply colors to elements */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.dropdown li:hover {
+  background: rgb(198,199,202, 0.2);
+}
+
+/* styles.css */
+.active-theme {
+  color: blue; /* Change this to your desired text color */
+}
+
+
 
 /* @media (prefers-color-scheme: dark) {
   :root {
@@ -29,23 +62,3 @@ body {
     align-items: center;
     justify-content: center;
 } */
-
-/* styles/globals.css */
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
-/* Add your custom styles here */
-
-/* Theme-specific styles */
-[data-theme='light'] {
-  /* Light theme styles */
-  background-color: white;
-  color: black;
-}
-
-[data-theme='dark'] {
-  /* Dark theme styles */
-  background-color: rgb(4,11,25);
-  color: white;
-}
